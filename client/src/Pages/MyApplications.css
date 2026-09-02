@@ -1,0 +1,247 @@
+.my-apps-page {
+  min-height: calc(100vh - 64px);
+  padding: 40px 20px 80px;
+  background: var(--linkedin-bg);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.my-apps-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.my-apps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.my-apps-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--linkedin-text);
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.my-apps-subtitle {
+  color: var(--linkedin-text-secondary);
+  font-size: 14.5px;
+  margin: 0;
+}
+
+.apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.application-card {
+  background: var(--linkedin-surface);
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--linkedin-shadow-sm);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.application-card:hover {
+  box-shadow: var(--linkedin-shadow-md);
+}
+
+.application-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.app-job-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--linkedin-text);
+  margin: 0 0 4px;
+  overflow-wrap: break-word;
+}
+
+.app-company-name {
+  color: var(--linkedin-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-badge.pending {
+  background-color: var(--linkedin-amber-light);
+  color: var(--linkedin-amber);
+  border: 1px solid var(--linkedin-amber-border);
+}
+
+.status-badge.accepted {
+  background-color: var(--linkedin-green-light);
+  color: var(--linkedin-green);
+  border: 1px solid var(--linkedin-green-border);
+}
+
+.status-badge.rejected {
+  background-color: var(--linkedin-red-light);
+  color: var(--linkedin-red);
+  border: 1px solid var(--linkedin-red-border);
+}
+
+.app-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  border-top: 1px solid var(--linkedin-border-light);
+  border-bottom: 1px solid var(--linkedin-border-light);
+  font-size: 13.5px;
+  color: var(--linkedin-text-secondary);
+}
+
+.app-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-cover-box {
+  margin-top: 16px;
+  background: #fafaf9;
+  border: 1px solid var(--linkedin-border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+}
+
+.app-cover-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--linkedin-text-muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.app-cover-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.app-status-message {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+
+.app-status-message.pending {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.app-status-message.accepted {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.app-status-message.rejected {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+/* Empty State */
+.no-apps-card {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--linkedin-surface);
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+}
+
+.no-apps-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.no-apps-card h2 {
+  font-size: 22px;
+  color: var(--linkedin-text);
+  margin-bottom: 8px;
+}
+
+.no-apps-card p {
+  color: var(--linkedin-text-secondary);
+  font-size: 14.5px;
+  margin-bottom: 24px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+  .my-apps-page {
+    padding: 20px 16px 60px;
+  }
+
+  .my-apps-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .my-apps-header .btn-secondary-md {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    text-align: center;
+  }
+
+  .my-apps-title {
+    font-size: 22px;
+  }
+
+  .application-card {
+    padding: 18px 14px;
+  }
+
+  .application-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .app-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

@@ -1,0 +1,296 @@
+.job-details-page {
+  padding: 32px 20px 80px;
+  background: var(--linkedin-bg);
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.job-details-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: var(--linkedin-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.back-link:hover {
+  color: var(--linkedin-blue);
+}
+
+/* Main Details Card */
+.job-details-main-card {
+  background: var(--linkedin-surface);
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--linkedin-shadow-sm);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.job-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--linkedin-border);
+  flex-wrap: wrap;
+}
+
+.company-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.company-logo-lg {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(10, 102, 194, 0.25);
+  flex-shrink: 0;
+}
+
+.job-title-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.job-details-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--linkedin-text);
+  margin: 0;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.job-details-company {
+  font-size: 16px;
+  color: var(--linkedin-text-secondary);
+  font-weight: 500;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.job-type-pill {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background-color: var(--linkedin-blue-light);
+  color: var(--linkedin-blue);
+  border: 1px solid var(--linkedin-blue-border);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* Chips Bar */
+.job-meta-chips-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--linkedin-border-light);
+}
+
+.meta-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fafaf9;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--linkedin-border-light);
+  min-width: 0;
+}
+
+.chip-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.chip-label {
+  display: block;
+  font-size: 11.5px;
+  color: var(--linkedin-text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.chip-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--linkedin-text);
+  overflow-wrap: break-word;
+}
+
+.chip-value.capitalize {
+  text-transform: capitalize;
+}
+
+/* Action Row */
+.job-action-row {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+}
+
+.apply-btn-primary {
+  padding: 12px 32px;
+  background-color: var(--linkedin-blue);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.apply-btn-primary:hover {
+  background-color: var(--linkedin-blue-hover);
+  transform: translateY(-1px);
+}
+
+/* Description Section */
+.job-description-section {
+  padding-top: 20px;
+}
+
+.section-heading-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--linkedin-text);
+  margin-bottom: 14px;
+}
+
+.job-description-body p {
+  color: #333;
+  line-height: 1.7;
+  font-size: 15px;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Loading & Not Found */
+.job-details-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  gap: 16px;
+  color: var(--linkedin-text-secondary);
+}
+
+.job-not-found-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.not-found-card {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--linkedin-surface);
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--radius-md);
+}
+
+.not-found-card h2 {
+  font-size: 24px;
+  color: var(--linkedin-text);
+  margin-bottom: 8px;
+}
+
+.not-found-card p {
+  color: var(--linkedin-text-secondary);
+  margin-bottom: 24px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 900px) {
+  .job-meta-chips-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+  .job-details-page {
+    padding: 20px 16px 60px;
+  }
+
+  .job-details-main-card {
+    padding: 20px 16px;
+  }
+
+  .job-details-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+
+  .job-details-title {
+    font-size: 21px;
+  }
+
+  .job-details-company {
+    font-size: 14.5px;
+  }
+
+  .company-logo-lg {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 22px;
+  }
+
+  .job-meta-chips-bar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px 0;
+  }
+
+  .apply-btn-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 13px;
+    box-sizing: border-box;
+  }
+}
