@@ -29,5 +29,14 @@ mongoose
     console.error("MongoDB Connection Failed");
     console.error(error.message);
   });
-
-module.exports = app;
+  
+  
+  module.exports = app;
+  
+  if (require.main === module) {
+    const PORT = process.env.PORT || 5000;
+  
+    app.listen(PORT, () => {
+      console.log(`HireFlow Backend running on http://localhost:${PORT}`);
+    });
+  }
